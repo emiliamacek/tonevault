@@ -43,8 +43,8 @@
             width: 16rem;
             margin-left: -16rem;
             
-            /* Flex properties */
-            flex-shrink: 0; /* ✅ Nie pozwól sidebarowi się ścisnąć */
+            
+            flex-shrink: 0; 
             
             transition: margin 0.25s ease-out;
             background-color: var(--bg-sidebar);
@@ -61,35 +61,35 @@
         
         .brand-icon { color: var(--accent-color); }
 
-        /* --- CONTENT WRAPPER --- */
+        
         #page-content-wrapper {
-            flex-grow: 1; /* ✅ Wypełnij resztę miejsca */
-            min-width: 0; /* Zapobiega problemom z overflow w flexboxie */
+            flex-grow: 1; 
+            min-width: 0; 
             width: 100%;
             transition: all 0.25s ease-out;
         }
 
-        /* --- TOGGLE LOGIC (Mobile First) --- */
         
-        /* Stan włączony (po kliknięciu na mobile lub domyślnie nic na desktopie) */
+        
+        
         #wrapper.toggled #sidebar-wrapper {
             margin-left: 0;
         }
 
-        /* --- DESKTOP MEDIA QUERY (min-width: 768px) --- */
+        
         @media (min-width: 768px) {
-            /* Na Desktopie sidebar jest domyślnie widoczny (margin 0) */
+            
             #sidebar-wrapper {
                 margin-left: 0;
             }
 
-            /* Na Desktopie, jak dodamy klasę .toggled, to CHOWAMY sidebar (-16rem) */
+            
             #wrapper.toggled #sidebar-wrapper {
                 margin-left: -16rem;
             }
         }
 
-        /* --- LIST ITEMS --- */
+        
         .list-group-item {
             background-color: transparent;
             color: var(--text-muted);
@@ -115,7 +115,7 @@
             font-size: 0.9rem;
         }
 
-        /* --- NAVBAR & UI ELEMENTS --- */
+        
         .navbar {
             background-color: var(--bg-sidebar) !important;
             border-bottom: 1px solid var(--border-color);

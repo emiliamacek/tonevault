@@ -62,12 +62,10 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Łapiemy inputy, textarea (Bio) oraz select (Skill Level)
         document.querySelectorAll('input, textarea, select').forEach(el => {
             // Wspólne style (Ciemne tło, biały tekst)
             el.classList.add('bg-dark', 'text-white', 'border-secondary');
             
-            // Jeśli to Select (Dropdown)
             if (el.tagName === 'SELECT') {
                 el.classList.add('form-select'); // Klasa Bootstrapa dla dropdownów
             } else {
@@ -78,12 +76,12 @@
 </script>
 
 <style>
-    /* Naprawa: Opcje w dropdownie też muszą być ciemne po rozwinięciu */
+    
     select option {
         background-color: #212529;
         color: white;
     }
-    /* Naprawa: Placeholder w textarea/inputach */
+    
     ::placeholder {
         color: #6c757d !important;
         opacity: 1;

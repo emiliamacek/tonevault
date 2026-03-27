@@ -1,0 +1,136 @@
+[
+  {
+    "model": "setups.genre",
+    "pk": 1,
+    "fields": { "name": "Rock" }
+  },
+  {
+    "model": "setups.genre",
+    "pk": 2,
+    "fields": { "name": "Metal" }
+  },
+  {
+    "model": "setups.genre",
+    "pk": 3,
+    "fields": { "name": "Blues" }
+  },
+  {
+    "model": "setups.band",
+    "pk": 1,
+    "fields": {
+      "name": "Metallica",
+      "genre": 2
+    }
+  },
+  {
+    "model": "setups.band",
+    "pk": 2,
+    "fields": {
+      "name": "Stevie Ray Vaughan",
+      "genre": 3
+    }
+  },
+  {
+    "model": "setups.song",
+    "pk": 1,
+    "fields": {
+      "title": "Enter Sandman",
+      "band": 1
+    }
+  },
+  {
+    "model": "setups.song",
+    "pk": 2,
+    "fields": {
+      "title": "Pride and Joy",
+      "band": 2
+    }
+  },
+  {
+    "model": "equipment.ownedgear",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "guitar": 2,
+      "amplifier": null,
+      "pedal": null,
+      "nickname": "My Les Paul",
+      "is_favorite": true,
+      "created_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.ownedgear",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "guitar": null,
+      "amplifier": 1,
+      "pedal": null,
+      "nickname": "JCM Beast",
+      "is_favorite": true,
+      "created_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.ownedgear",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "guitar": null,
+      "amplifier": null,
+      "pedal": 2,
+      "nickname": "Green Screamer",
+      "created_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "setups.setup",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "Heavy Rythm Tone",
+      "description": "Solidny metalowy ton do grania rytmicznego.",
+      "genre": 2,
+      "band": 1,
+      "song": 1,
+      "is_public": true,
+      "is_favorite": true,
+      "created_at": "2024-01-02T12:00:00Z",
+      "updated_at": "2024-01-02T12:00:00Z"
+    }
+  },
+  {
+    "model": "setups.signalchainitem",
+    "pk": 1,
+    "fields": {
+      "setup": 1,
+      "owned_gear": 1,
+      "order": 1,
+      "settings": { "Volume": 10, "Tone": 10 },
+      "notes": "Les Paul na pickupie mostkowym"
+    }
+  },
+  {
+    "model": "setups.signalchainitem",
+    "pk": 2,
+    "fields": {
+      "setup": 1,
+      "owned_gear": 3,
+      "order": 2,
+      "settings": { "Drive": 0, "Level": 10, "Tone": 6 },
+      "notes": "Używany jako boost (Drive na zero)"
+    }
+  },
+  {
+    "model": "setups.signalchainitem",
+    "pk": 3,
+    "fields": {
+      "setup": 1,
+      "owned_gear": 2,
+      "order": 3,
+      "settings": { "Gain": 8, "Bass": 6, "Middle": 4, "Treble": 7 },
+      "notes": "Wzmacniacz rozkręcony"
+    }
+  }
+]

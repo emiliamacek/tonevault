@@ -1,0 +1,158 @@
+[
+  {
+    "model": "equipment.brand",
+    "pk": 1,
+    "fields": {
+      "name": "Fender",
+      "is_unknown": false
+    }
+  },
+  {
+    "model": "equipment.brand",
+    "pk": 2,
+    "fields": {
+      "name": "Gibson",
+      "is_unknown": false
+    }
+  },
+  {
+    "model": "equipment.brand",
+    "pk": 3,
+    "fields": {
+      "name": "Marshall",
+      "is_unknown": false
+    }
+  },
+  {
+    "model": "equipment.brand",
+    "pk": 4,
+    "fields": {
+      "name": "Boss",
+      "is_unknown": false
+    }
+  },
+  {
+    "model": "equipment.brand",
+    "pk": 5,
+    "fields": {
+      "name": "Ibanez",
+      "is_unknown": false
+    }
+  },
+  {
+    "model": "equipment.brand",
+    "pk": 999,
+    "fields": {
+      "name": "Unknown",
+      "is_unknown": true
+    }
+  },
+  {
+    "model": "equipment.guitar",
+    "pk": 1,
+    "fields": {
+      "name": "Stratocaster Player Series",
+      "brand": 1,
+      "guitar_type": "STRAT",
+      "num_strings": 6,
+      "pickup_config": "SSS",
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.guitar",
+    "pk": 2,
+    "fields": {
+      "name": "Les Paul Standard '60s",
+      "brand": 2,
+      "guitar_type": "LES_PAUL",
+      "num_strings": 6,
+      "pickup_config": "HH",
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.guitar",
+    "pk": 3,
+    "fields": {
+      "name": "RG550 Genesis",
+      "brand": 5,
+      "guitar_type": "OTHER",
+      "num_strings": 6,
+      "pickup_config": "HSH",
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.amplifier",
+    "pk": 1,
+    "fields": {
+      "name": "JCM800 2203",
+      "brand": 3,
+      "amp_type": "TUBE",
+      "wattage": 100,
+      "has_effects_loop": true,
+      "available_controls": [
+        "Pre-Amp Volume",
+        "Master Volume",
+        "Treble",
+        "Middle",
+        "Bass",
+        "Presence"
+      ],
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.amplifier",
+    "pk": 2,
+    "fields": {
+      "name": "'65 Twin Reverb",
+      "brand": 1,
+      "amp_type": "TUBE",
+      "wattage": 85,
+      "has_effects_loop": false,
+      "available_controls": [
+        "Volume",
+        "Treble",
+        "Middle",
+        "Bass",
+        "Reverb",
+        "Speed",
+        "Intensity"
+      ],
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.pedal",
+    "pk": 1,
+    "fields": {
+      "name": "DS-1 Distortion",
+      "brand": 4,
+      "pedal_type": "DISTORTION",
+      "available_controls": ["Tone", "Level", "Dist"],
+      "default_settings": { "Tone": 50, "Level": 50, "Dist": 50 },
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  },
+  {
+    "model": "equipment.pedal",
+    "pk": 2,
+    "fields": {
+      "name": "TS9 Tube Screamer",
+      "brand": 5,
+      "pedal_type": "OVERDRIVE",
+      "available_controls": ["Drive", "Tone", "Level"],
+      "default_settings": { "Drive": 20, "Tone": 60, "Level": 80 },
+      "created_at": "2024-01-01T12:00:00Z",
+      "updated_at": "2024-01-01T12:00:00Z"
+    }
+  }
+]
